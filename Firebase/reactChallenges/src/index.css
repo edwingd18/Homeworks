@@ -13,6 +13,18 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+
+.toggleTodo{
+    text-decoration: line-through;
+    color: red;
+    cursor:pointer;
+}
+
+.not-toggletodo{
+    text-decoration: none;
+    cursor:pointer;
+}
+
 a {
   font-weight: 500;
   color: #646cff;

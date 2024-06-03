@@ -1,0 +1,31 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.wrapper {
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    width: 400px;
+}
+
+.wrapper form{
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+
+}
+
+.wrapper form input{
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+}
+.registro:hover{
+    text-decoration: underline;
+}
