@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { getAll, upload } from "../firebase/files";
+import { getAll, upload } from "../firebase/firestore";
 import { getDownloadURL } from "firebase/storage";
 
 export const useUploadHook = () => {

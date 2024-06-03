@@ -1,9 +1,9 @@
-// firebaseConfig.js
-import { initializeApp } from "firebase/app";
 import { getAuth } from 'firebase/auth';
-import { getStorage } from "firebase/storage";
+import { initializeApp } from 'firebase/app';
+import { getStorage } from 'firebase/storage';
+import { getFirestore } from 'firebase/firestore';
 
-// Tu configuración de Firebase
+
 const firebaseConfig = {
   apiKey: "AIzaSyB8Ta7OQVuWl2DlCQagAMYFiAkqmwtsfmg",
   authDomain: "tranquil-rite-419712.firebaseapp.com",
@@ -14,8 +14,12 @@ const firebaseConfig = {
   measurementId: "G-Z0K0BRDE69"
 };
 
-const firebaseApp = initializeApp(firebaseConfig);
-const auth = getAuth();
-const firebaseStorage = getStorage(firebaseApp);
 
-export { firebaseApp, auth, firebaseStorage };
+
+
+const app = initializeApp(firebaseConfig);
+const auth = getAuth();
+const firebaseStorage = getStorage(app);
+const db = getFirestore();
+
+export { app, auth, firebaseStorage, db };
