@@ -7,12 +7,13 @@ import {getAuth} from "firebase/auth";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyAcbIVqi5aqAHjQqlQz4WG3-wGWPVq_iJA",
-  authDomain: "playgroound-bc5b5.firebaseapp.com",
-  projectId: "playgroound-bc5b5",
-  storageBucket: "playgroound-bc5b5.appspot.com",
-  messagingSenderId: "1048744607257",
-  appId: "1:1048744607257:web:a23580b3aaacf7b1f9b488"
+  apiKey: "AIzaSyB8Ta7OQVuWl2DlCQagAMYFiAkqmwtsfmg",
+  authDomain: "tranquil-rite-419712.firebaseapp.com",
+  projectId: "tranquil-rite-419712",
+  storageBucket: "tranquil-rite-419712.appspot.com",
+  messagingSenderId: "139935788836",
+  appId: "1:139935788836:web:c8efc35839c743aa8c4db1",
+  measurementId: "G-Z0K0BRDE69"
 };
 
 // Initialize Firebase
