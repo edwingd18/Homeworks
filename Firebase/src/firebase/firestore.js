@@ -76,3 +76,4 @@ const useCollection = (table) => {
 };
 
 export default useCollection;
+    

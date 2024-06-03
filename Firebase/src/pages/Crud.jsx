@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import useCollection from '../firebase/firestore';
+import './Crud.css';
 
 export const Crud = () => {
   const [user, setUser] = useState({ name: '' });
   const [editUser, setEditUser] = useState({ id: '', name: '' });
-  const { add, getAll, update, remove, isPending, results } = useCollection('users');
+  const { add, getAll, update, remove, results } = useCollection('users');
 
   const getAllDocs = async () => {
     await getAll([]);
@@ -40,14 +41,14 @@ export const Crud = () => {
   }, []);
 
   return (
-    <>
-      <input type="text" onChange={handleSetUser} value={user.name} />
-      <button type="button" onClick={save}>Guardar</button>
-      {isPending ? <span>Saving...</span> : ''}
-      <ul>
+    <div className='card'>
+      <h1 className='xd'>CRUD</h1>
+      <input className="hola" type="text" onChange={handleSetUser} value={user.name} />
+      <button className='Guardar' type="button" onClick={save}>Guardar</button>
+      <ul className='list'>
         {results.map(item => {
           return (
-            <li key={item.id}>
+            <li className='item' key={item.id}>
               {editUser.id === item.id ? (
                 <>
                   <input
@@ -60,14 +61,16 @@ export const Crud = () => {
               ) : (
                 <>
                   {item.name}
-                  <button onClick={() => handleEdit(item.id, item.name)}>Editar</button>
-                  <button onClick={() => handleRemove(item.id)}>Eliminar</button>
+                  <div className="buttons">
+                    <button className='Editar' onClick={() => handleEdit(item.id, item.name)}>Editar</button>
+                    <button className='Eliminar' onClick={() => handleRemove(item.id)}>Eliminar</button>
+                  </div>
                 </>
               )}
             </li>
           );
         })}
       </ul>
-    </>
+    </div>
   );
 };
